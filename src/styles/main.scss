@@ -404,6 +404,7 @@ body {
   &__container2 {
     position: relative;
     border: 5px solid #f4d3bb;
+    box-sizing: border-box;
     max-width: 1024px;
     height: 137px;
     font-family: sans-serif, Roboto-Italic;
@@ -543,7 +544,7 @@ body {
   &__container3-resume {
     border: 4px solid #f4d3bb;
     box-sizing: border-box;
-    width: 1024px;
+    max-width: 1024px;
     height: 170px;
     margin: 60px auto 0;
     position: relative;
@@ -681,7 +682,7 @@ body {
   &__container4-description {
     position: relative;
     margin: 35px auto 0;
-    width: 865px;
+    max-width: 865px;
     height: 80px;
     border: 2px solid #f64d01;
     border-radius: 20px;
@@ -788,4 +789,74 @@ body {
     font-weight: bold;
   }
 
+}
+
+@media(max-width: 639px){
+  .header {
+    &__rating-img,
+    &__rating-description,
+    &__recommendation-img,
+    &__recommendation-description,
+    &__clients-img,
+    &__clients-description,
+    &__middle-container {
+      display: none;
+    }
+
+    &__img-feet {
+      left: 0;
+      width: 620px;
+    }
+  }
+
+  .main {
+    &__container1 {
+      display: block;
+    }
+
+    &__container1-fr {
+      margin: 0 auto 35px;
+      display: inline-block;
+    }
+
+    &__container3 {
+      height: 2600px;
+    }
+
+    &__container3-cards {
+      display: block;
+    }
+
+    &__container3-resume {
+      height: 190px;
+    }
+
+    &__container4-cards {
+      flex-direction: column;
+    }
+
+    &__container4-card {
+      margin: 20px auto;
+    }
+
+    &__container4-description {
+      height: 100px;
+    }
+  }
+
+  .footer {
+    height: 830px;
+
+    &__product {
+      left: 2%;
+    }
+
+    &__glass {
+      left: 15%;
+    }
+
+    &__instruction {
+      display: block;
+    }
+  }
 }
